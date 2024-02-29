@@ -6,7 +6,7 @@
 
 n = int(input("Введите любое число "))
 
-def is_happy_number(n):
+def is_perfect_number(n):
     s=0
     for a in range (1,n-1):
         if n % a == 0:
@@ -16,5 +16,5 @@ def is_happy_number(n):
     else:
         return(False)
 
-result = is_happy_number(n)
+result = is_perfect_number(n)
 print(result)
