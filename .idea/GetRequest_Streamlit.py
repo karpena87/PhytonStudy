@@ -3,8 +3,8 @@ import requests
 
 def getRequest():
     response = requests.get('https://api.github.com/search/repositories')
-    st.write_stream(response)
-getRequest()
+    return response
+st.write_stream(getRequest())
 
 
 
