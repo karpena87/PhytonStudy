@@ -20,18 +20,8 @@ getRequest()
 
 
 
-
-
-#if "disabled" not in st.session_state:
- #   st.session_state["disabled"] = False
-
-#def disable():
-    #st.session_state["disabled"] = True
-
-#st.text_input(
-    #"Enter some text",
-    #disabled=st.session_state.disabled,
-    #on_change=disable
-#)
+#https://github.com/karpena87/PhytonStudy/blob/main/Disable_Input.py
+#https://api.kraken.com/0/public/SystemStatus
+#url с ошибкой https://api.kraken.com/0/public/SystemStat
 
 
