@@ -14,14 +14,14 @@ for message in st.session_state.messages:
 # Поле для ввода пользовательского запроса
 if prompt := st.chat_input("Введите ваш запрос"):
     # Вывод сообщения пользователя в контейнере сообщений
-    with st.chat_message("user"):
+    with st.chat_message("Пользователь"):
         st.markdown(prompt)
     # Добавление пользовательского сообщения в историю чата
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.session_state.messages.append({"role": "Пользователь", "content": prompt})
 
     response = f"Эхо: {prompt}"
     # Вывод ответа ассистента в контейнере сообщений
-    with st.chat_message("assistant"):
+    with st.chat_message("Ассистент"):
         st.markdown(response)
     # Добавление ответа ассистента в историю чата
-    st.session_state.messages.append({"role": "assistant", "content": response})
+    st.session_state.messages.append({"role": "Ассистент", "content": response})
