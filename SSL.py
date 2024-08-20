@@ -1,19 +1,18 @@
-#import streamlit as st
+import streamlit as st
 import urllib3
 import requests
 
 urllib3.disable_warnings()
 
 url = "https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-
 payload='scope=GIGACHAT_API_PERS'
 headers = {
     'Content-Type': 'application/x-www-form-urlencoded',
     'Accept': 'application/json',
     'RqUID': '6f0b1291-c7f3-43c6-bb2e-9f3efb2dc98e',
-    'Authorization': 'Basic eyJjdHkiOiJqd3QiLCJlbmMiOiJBMjU2Q0JDLUhTNTEyIiwiYWxnIjoiUlNBLU9BRVAtMjU2In0.KmfZFmjFo85cOlTgIMimT8fiRpR7ZGcKJO55E_fjNEOtl33o_bdOJ9KCiLfnxZEtiqVc6miIFit4r65FdnCpWmqsciXlm5S-jsDtt0ay3xQGt71P82KSscQE7rWhxh0CAVMgKUk5ukzwGi4P9_4796k2lUVzrmZQ--2DNwXgqXhj9mRguRvSEK86sv5-CtAADC49IeqHkGDjIQQJ14xBIICynCb-E4Z-ChNBtRm_WCnRi8vonlzr7oq5pQV1dDkFvuO4RttOI06VP-twrkulKH6i85E9i1TXI8gBGfgFavlERFacZS3BA_YKkcM83KDp-bYzp2w9Mf85mDE3fwdiRg.oGxwDheCcuAQGkYiEWr2Vw.bcOltKOltjgbrRsBIdWX3voVRn1D13aXYCDNa158q1Los0bccBomNLmVcLurlnVg_EI5UyT5OK_Sb12WZH6zU3gn4X5adH4NYkAcE35npLpMKJsHSb50cU6NU3u0WaBSbtHbQ6qz0x8tXHrPdpxvuldTAc89br5T2UyplCVrP4xj5KUyWk1DUfgvjNXf8e0fdd0Jhjb9GfBah3fQvgE7ygDGu3vQYiOygLGRsJF2jiT-y8VOPonsJGu2Q8ncwNpTEW1QDn4GxVMUG6NTTbTq4yM6rXYBwCUHTRb2k8Xkv64jAizKT2hNuKGsISB770zI6RJiE96qPu20wtjwiBRdwjFsafxUKLmbbXc1U5ooX8Nq3-8CZe2U9VzDNbkX2RY1lMAPQ40uom64WlNygsA-ClRqsz75ge0zn1_31it6AkdBYc9xtxXPi1uyl1NbL19K_nw_5FqEJ8k95PybLMMs4sZLHLUIg99b1jKYKF-p8Za0Zuqt1uaxwRAD5ChxLoYRHBCNhA2IwNCOlcbLm6sPRMCjyskOZuHHe4y-Ane-kRfyOYeIqyBWKPu0Xtm33pXjg3zEhay4dYvvB4EFc7AZKCK2Ik3U-Z9SbKw-IuvICJSdnzH4i2nVD5JxqsgNCxWfvGXGkLq215Q44oTZDz3K7y4ya7_mM-xVmzpmSkBdEqynSTWXurw7G7KehpYNHMWNuQNgFIwU34M8BNPojLqmkTCfN9MZ9BRRzRJk5r_dbDk.Q_xbupJkUgVAZE8GXUNcO3PogsA5oGpAlJpEwqQ_8Xw'
+    'Authorization': 'Basic MGUzYmNiNzctOGUwNS00ZTZkLWI0YTgtNTc5NTBhYmY1MTkzOjk1ODgwZWMwLTdiYmMtNGQ5Yi04ZTU0LTM1ZDgzNjBjMGU4OA=='
 }
 
 token = requests.request("POST", url, verify=False, headers=headers, data=payload)
 
-print(token.text)
+st.write (token.text)
